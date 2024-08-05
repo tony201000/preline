@@ -32,7 +32,7 @@ const Index: React.FC = () => {
     return (
         <div className="bg-gradient-to-b from-violet-600/50 via-sky-400" itemScope itemType="https://schema.org/WebPage">
             <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
-                {/* Bannière d'annonce */}
+                {/* Bannière d&rsquo;annonce */}
                 <div className="flex justify-center">
                     <a className="group inline-flex items-center bg-white/10 hover:bg-white/10 border border-white/10 p-1 ps-4 rounded-full shadow-md focus:outline-none focus:bg-white/10" href="../figma.html" itemProp="url">
                         <p className="me-2 text-white text-sm" itemProp="description">
@@ -45,7 +45,7 @@ const Index: React.FC = () => {
                         </span>
                     </a>
                 </div>
-                {/* Fin de la bannière d'annonce */}
+                {/* Fin de la bannière d&rsquo;annonce */}
 
                 {/* Titre */}
                 <div className="max-w-3xl text-center mx-auto">
@@ -57,7 +57,7 @@ const Index: React.FC = () => {
 
                 <div className="max-w-3xl text-center mx-auto">
                     <p className="text-lg text-white/70" itemProp="text">
-                        Vous êtes ici car vous avez été invité par un ami proche à profiter de bons plans extraordinaires et dont la force réside dans le fait que pour qu'un bon plan reste exceptionnel il ne doit pas trop s'ébruiter.
+                        Vous êtes ici car vous avez été invité par un ami proche à profiter de bons plans extraordinaires et dont la force réside dans le fait que pour qu&rsquo;un bon plan reste exceptionnel il ne doit pas trop s&rsquo;ébruiter.
                     </p>
                 </div>
 
@@ -145,7 +145,7 @@ const Index: React.FC = () => {
                                                 Se connecter
                                             </button>
 
-                                            {/* Message d'erreur */}
+                                            {/* Message d&rsquo;erreur */}
                                             {error && <p className="text-red-600 text-xs">{error}</p>}
                                         </div>
                                     </form>

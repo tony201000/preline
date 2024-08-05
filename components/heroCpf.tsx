@@ -7,27 +7,27 @@ const HeroCpf = () => (
       <div className="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
         <h1 className="font-semibold text-white text-5xl md:text-6xl">
           <span className="text-[#ff0] ">Récupérer une partie de son CPF, 
-          </span> c'est vraiment possible ?
+          </span> c&rsquo;est vraiment possible ?
         </h1>
         <div className="max-w-4xl">
           <p className="mt-5 text-neutral-300 text-lg text-justify">
           En France, le Compte Personnel de Formation (CPF) est un droit à la formation acquis par toute personne active 
           dès son entrée sur le marché du travail. 
-          Il a pour objectif d'augmenter le niveau de qualification de chacun et de sécuriser le parcours professionnel. 
+          Il a pour objectif d&rsquo;augmenter le niveau de qualification de chacun et de sécuriser le parcours professionnel. 
           </p>
           <p className="mt-5 text-neutral-200 text-lg text-justify">
           Pour un travailleur à temps plein, le CPF est crédité de 500 euros par an, dans la limite de 5000 euros, 
           voir 800 euros pour les travailleurs les moins qualifiés dans la limite de 8000 euros.
           </p>
           <p className="mt-5 text-neutral-300 text-lg text-justify">
-          Cet argent est maintenu sur un compte CPF jusqu'au décès et peut être utilisé pour financer des formations professionnelles 
+          Cet argent est maintenu sur un compte CPF jusqu&rsquo;au décès et peut être utilisé pour financer des formations professionnelles 
           ou bilans de compétences, même en étant à la retraite.
           </p>
           <p className="mt-5 text-neutral-200 text-lg text-justify">
-          Vous êtes nombreux à posséder une cagnotte CPF importante, et à ne pas savoir comment l'utiliser. De plus, une fois atteint le plafond de 5000 ou 8000 euros, le CPF ne se crédite plus, vous perdez alors votre droit aux 500 euros supplémentaires par an.
+          Vous êtes nombreux à posséder une cagnotte CPF importante, et à ne pas savoir comment l&rsquo;utiliser. De plus, une fois atteint le plafond de 5000 ou 8000 euros, le CPF ne se crédite plus, vous perdez alors votre droit aux 500 euros supplémentaires par an.
           </p>
           <p className="mt-5 text-red-600 font-semibold text-3xl text-center">
-          Mais saviez-vous qu'il est possible de récupérer une partie de votre CPF en argent CASH ?
+          Mais saviez-vous qu&rsquo;il est possible de récupérer une partie de votre CPF en argent CASH ?
           </p>
           <p className="mt-5 text-neutral-200 text-lg text-justify">
           En effet, grâce au partenariat exclusif négocié avec une entreprise française legalement implanteé, il est possible de transformer une partie de votre CPF en argent.

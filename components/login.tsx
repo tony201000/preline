@@ -14,7 +14,7 @@ const Login: React.FC = () => {
     event.preventDefault();
     try {
       await signIn(email, password);
-      router.push('/dashboard'); // Redirigez l'utilisateur vers une page sécurisée après connexion
+      router.push('/dashboard'); // Redirigez l&rsquo;utilisateur vers une page sécurisée après connexion
     } catch (error) {
       setError('Échec de la connexion. Vérifiez vos informations.');
     }

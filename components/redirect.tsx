@@ -18,7 +18,7 @@ const Redirect: React.FC = () => {
   return (
     <div className="container mx-auto p-4 text-center">
       <h1 className="text-2xl font-bold mb-4">Parrainage Boursobank</h1>
-      <p className="mb-2">Vous allez être redirigé vers la page d'inscription de Boursobank.</p>
+      <p className="mb-2">Vous allez être redirigé vers la page d&rsquo;inscription de Boursobank.</p>
       <p className="mb-2">Utilisez le code de parrainage ci-dessous lors de votre inscription :</p>
       <p className="mb-2">Code de parrainage : <strong>{codeParrainage}</strong></p>
       <p className="mb-2">Nom : <strong>{nom}</strong></p>

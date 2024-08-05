@@ -12,12 +12,12 @@ const Header: React.FC = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    setErrorMessage(''); // Réinitialiser le message d'erreur à chaque ouverture
+    setErrorMessage(''); // Réinitialiser le message d&rsquo;erreur à chaque ouverture
   };
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    setErrorMessage(''); // Réinitialiser le message d'erreur
+    setErrorMessage(''); // Réinitialiser le message d&rsquo;erreur
   
     try {
         await signInWithEmailAndPassword(auth, email, password);

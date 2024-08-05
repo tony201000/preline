@@ -20,12 +20,12 @@ const HeaderMember: React.FC = () => {
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    setErrorMessage(''); // Réinitialiser le message d'erreur à chaque ouverture
+    setErrorMessage(''); // Réinitialiser le message d&rsquo;erreur à chaque ouverture
   };
 
   const handleLogin = async (event: React.FormEvent) => {
     event.preventDefault();
-    setErrorMessage(''); // Réinitialiser le message d'erreur
+    setErrorMessage(''); // Réinitialiser le message d&rsquo;erreur
   
     try {
         await signIn(email, password);
@@ -52,7 +52,7 @@ const HeaderMember: React.FC = () => {
 
     const handleLogout = async () => {
         await logout();
-        window.location.href = '/'; // Rediriger vers la page d'accueil
+        window.location.href = '/'; // Rediriger vers la page d&rsquo;accueil
       };
 
     return (

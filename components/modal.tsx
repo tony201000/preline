@@ -26,7 +26,7 @@ const ModuleCalCpf: React.FC = () => {
   return (
     <>
       <div className="text-center">
-        {/* Bouton d'accès au modal */}
+        {/* Bouton d&rsquo;accès au modal */}
         <button
           type="button"
           onClick={toggleModal}
@@ -37,7 +37,7 @@ const ModuleCalCpf: React.FC = () => {
         >
           Votre Montant
         </button>
-        {/* Fin bouton d'accès au modal */}
+        {/* Fin bouton d&rsquo;accès au modal */}
       </div>
       {isModalOpen && (
         <div

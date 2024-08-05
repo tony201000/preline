@@ -67,7 +67,7 @@ const FaqCPF = () => (
               >
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
                   La formation dans laquelle vous serez inscrit est un bilan de compétences 100% en ligne.
-                  Le centre de formation dont elle fait partie est entierement reconnu par L'Etat.
+                  Le centre de formation dont elle fait partie est entierement reconnu par L&rsquo;Etat.
                 </p>
               </div>
             </div>
@@ -120,7 +120,7 @@ const FaqCPF = () => (
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
                   Non, Vous ne devrez suivre aucune formation.
                   Cependant, vous recevrez par mail les documents comme-ci vous suiviez une formation.
-                  Vous n'avez pas besoin d'y répondre ou de signer quoique ce soit.
+                  Vous n&rsquo;avez pas besoin d&rsquo;y répondre ou de signer quoique ce soit.
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const FaqCPF = () => (
                 aria-expanded="false"
                 aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
               >
-                J'ai recu un mail m'invitant à un appel vidéo. Dois-je y participer ?
+                J&rsquo;ai recu un mail m&rsquo;invitant à un appel vidéo. Dois-je y participer ?
                 <svg
                   className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
                   xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ const FaqCPF = () => (
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
               >
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
-                  Non, comme indiqué précédemment, vous n'avez pas besoin de répondre aux mails ou appels vidéos.
+                  Non, comme indiqué précédemment, vous n&rsquo;avez pas besoin de répondre aux mails ou appels vidéos.
                   Ils sont envoyés dans le but de rendre officiel le fait que vous suiviez une formation.
                 </p>
               </div>
@@ -223,11 +223,11 @@ const FaqCPF = () => (
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
               >
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
-                  Depuis le 2 mai 2024 l'Etat a mis en place une participation forfaitaire obligatoire de 100 €
+                  Depuis le 2 mai 2024 l&rsquo;Etat a mis en place une participation forfaitaire obligatoire de 100 €
                   pour les personnes souhaitant utiliser leur compte personnel de formation.</p>
                 <p className="">Malheureusement, il est impossible de passer outre cette participation, mais vous en récupérerez bien plus.</p>
                 <p className="">De plus il est possible de profiter du bon plan <a href="/Bourso2" className="text-red-900 font-semibold"> Boursorama </a>
-                  pour récupérer 70 euros sans avancer d'argent et jusqu'a 220 euros !</p>
+                  pour récupérer 70 euros sans avancer d&rsquo;argent et jusqu&rsquo;a 220 euros !</p>
               </div>
             </div>
             {/* End Col */}
@@ -279,11 +279,11 @@ const FaqCPF = () => (
                 aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one"
               >
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
-                  En effet, il est impossible de récupérer tout l'argent qui est sur votre compte de formation car
+                  En effet, il est impossible de récupérer tout l&rsquo;argent qui est sur votre compte de formation car
                   pour pouvoir accéder à cet argent bloqué, le centre de formation doit effectuer des démarches et cela a un cout!
                 </p>
                 <p className='text-gray-700'>Voici ce qui est déduit du montant total :</p>
-                <li>Les taxes percues par l'URSAAF : 23,6%</li>
+                <li>Les taxes percues par l&rsquo;URSAAF : 23,6%</li>
                 <li>Le montant nécessaire au centre de formation pour mener les démarches : salaires, suivi du dossier...</li>
                 <li>Une commission de 100 euros</li>
                 <p>Vérifie le montant que tu peux toucher grâce à ce module:</p><ModuleCalCpf />
@@ -299,7 +299,7 @@ const FaqCPF = () => (
                 aria-expanded="false"
                 aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one"
               >
-                Est-ce qu'il y a un risque ?
+                Est-ce qu&rsquo;il y a un risque ?
                 <svg
                   className="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400"
                   xmlns="http://www.w3.org/2000/svg"
@@ -337,7 +337,7 @@ const FaqCPF = () => (
               >
                 <p className="mt-2 text-gray-600 dark:text-neutral-400">
                   La société qui vous propose de récupérer votre argent est une société qui ne souhaite prendre aucun risque.
-                  Pourquoi risquerait-elle de tuer la poule aux oeufs d'or ?
+                  Pourquoi risquerait-elle de tuer la poule aux oeufs d&rsquo;or ?
                 </p>
                 <p className="text-gray-700">Elle est enregistrée au RCS de Paris, et est listée officiellement dans les sociétés partenaires sur le site du CPF</p>
               </div>

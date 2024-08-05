@@ -30,8 +30,8 @@ const CPF: React.FC = () => {
               src="https://i.ibb.co/6NwG7Zh/Souriez-et-recuperez-ce-qui-vous-appartient.jpg"
               alt="Souriez, et récupérez ce qui vous appartient"
               layout="responsive"  // ou "intrinsic", "fixed", selon tes besoins
-              width={1200}  // largeur de l'image en pixels
-              height={675}  // hauteur de l'image en pixels
+              width={1200}  // largeur de l&rsquo;image en pixels
+              height={675}  // hauteur de l&rsquo;image en pixels
             />
             </div>
             {/* End Col */}
@@ -64,7 +64,7 @@ const CPF: React.FC = () => {
                     <p>Pour cela vous devez vous connecter sur </p>
                     <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" className='hover:text-red-900'> moncompteformation.gouv.fr </a>
                     et utiliser le service de LAPOSTE : <b>Identité Numérique</b>, pour vous connecter.
-                    <a href="identiteNumerique/" className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d'inscription à l'Identité Numérique.</a>                
+                    <a href="identiteNumerique/" className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
                   </p>
                 </div>
                 {/* End Right Content */}
@@ -133,7 +133,7 @@ const CPF: React.FC = () => {
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm md:text-base text-black">
                     <span className="text-white">Réception des gains</span>
-                    <p>Quelques jours après, vous recevrez l'argent par virement bancaire sur votre compte.</p>
+                    <p>Quelques jours après, vous recevrez l&rsquo;argent par virement bancaire sur votre compte.</p>
                   </p>
                 </div>
                 {/* End Right Content */}

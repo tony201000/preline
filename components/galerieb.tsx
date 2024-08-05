@@ -11,7 +11,7 @@ const images: string[] = [
   'https://zupimages.net/up/24/31/uf7g.jpg',
   'https://zupimages.net/up/24/31/dwn1.jpg',
   'https://zupimages.net/up/24/31/o3ld.jpg',
-  // Ajoutez d'autres URL d'images ici
+  // Ajoutez d&rsquo;autres URL d&rsquo;images ici
 ];
 
 
