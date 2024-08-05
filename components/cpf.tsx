@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ModuleCalCpf from './modal';
+import Image from 'next/image';
 import ProtectedRoute from './protectedRoute';
 
 const CPF: React.FC = () => {
@@ -24,11 +25,14 @@ const CPF: React.FC = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-              <img
-                className="w-full object-cover rounded-xl"
-                src="https://i.ibb.co/6NwG7Zh/Souriez-et-recuperez-ce-qui-vous-appartient.jpg"
-                alt="Souriez, et recuperez ce qui vous appartient"
-              />
+            <Image
+              className="w-full object-cover rounded-xl"
+              src="https://i.ibb.co/6NwG7Zh/Souriez-et-recuperez-ce-qui-vous-appartient.jpg"
+              alt="Souriez, et récupérez ce qui vous appartient"
+              layout="responsive"  // ou "intrinsic", "fixed", selon tes besoins
+              width={1200}  // largeur de l'image en pixels
+              height={675}  // hauteur de l'image en pixels
+            />
             </div>
             {/* End Col */}
             {/* Timeline */}
