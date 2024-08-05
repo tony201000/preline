@@ -1,0 +1,32 @@
+.embla {
+  overflow: hidden;
+  width: 100%;
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    position: relative;
+    flex: 0 0 100%;
+    cursor: pointer;
+    height: 300px; // Ajuste selon tes besoins
+  }
+}
+
+.zoomed-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+
+  img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
