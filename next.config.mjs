@@ -1,28 +1,23 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https', // Ensure protocol is specified
-        hostname: 'zupimages.net',
-        port: '', // Leave empty for default
-        pathname: '/**', // Allow all paths
-      },
-    ],
-  },
-};
+// next.config.mjs
 
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 dotenv.config();
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
   env: {
     NEXT_PUBLIC_API_KEY: process.env.NEXT_PUBLIC_API_KEY,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'zupimages.net',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
-
 export default nextConfig;
-
-
-
