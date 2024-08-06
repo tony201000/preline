@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import SeConnecterBleu from './boutons/seConnecterBleu';    
 
 
 const Index: React.FC = () => {
@@ -30,7 +31,7 @@ const Index: React.FC = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-violet-600/50 via-sky-400" itemScope itemType="https://schema.org/WebPage">
+        <div className="bg-zinc-700" itemScope itemType="https://schema.org/WebPage">
             <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
                 {/* Titre */}
                 <div className="max-w-3xl text-center mx-auto">
@@ -47,24 +48,13 @@ const Index: React.FC = () => {
                 </div>
 
                 <div className="max-w-3xl text-center mx-auto">
-                    <p className="text-lg text-red-800" itemProp="text">
+                    <p className="text-lg text-red-500" itemProp="text">
                         Pour accéder à tous vos avantages connectez-vous avec vos identifiants personnels qui vous ont été communiqués :
                     </p>
                 </div>
 
                 {/* Boutons */}
-                <div className="text-center">
-                    <button
-                        type="button"
-                        className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
-                        aria-haspopup="dialog"
-                        aria-expanded="false"
-                        aria-controls="hs-modal-signin"
-                        data-hs-overlay="#hs-modal-signin"
-                    >
-                        Se connecter
-                    </button>
-                </div>
+                <SeConnecterBleu />
                 {/* Fin des boutons */}
 
                 {/* Modal de connexion */}

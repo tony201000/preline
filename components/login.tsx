@@ -87,8 +87,8 @@ const Login: React.FC = () => {
           <h1 className="text-2xl text-white sm:text-4xl">
             Acces Non Autorise
           </h1>
-          <h2 className="mt-1 sm:mt-3 text-4xl font-bold text-white sm:text-6xl">
-            <span className="bg-clip-text bg-gradient-to-tr from-blue-600 to-purple-400 text-transparent">
+          <h2 className="mt-1 sm:mt-3 text-4xl font-bold text-black sm:text-6xl">
+            <span className="bg-clip-text bg-gradient-to-tr from-red-300 to-red-800 text-transparent">
               Merci de vous authentifier
             </span>
           </h2>
@@ -105,14 +105,14 @@ const Login: React.FC = () => {
                   <input
                     type="email"
                     id="hs-cover-with-gradient-form-name-1"
-                    className="py-3 ps-11 pe-4 block w-full bg-white/10 border-white/20 text-white placeholder:text-white rounded-lg text-sm focus:border-white/30 focus:ring-white/30 sm:p-4 sm:ps-11"
+                    className="py-3 ps-11 pe-4 block w-full bg-white/20 border-black/20 text-black placeholder:text-white rounded-lg text-sm focus:border-white/30 focus:ring-white/30 sm:p-4 sm:ps-20"
                     placeholder="Email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
+                  <div className="absolute inset-y-0 start-10 flex items-center pointer-events-none z-20 ps-4">
                     <svg
-                      className="shrink-0 size-4 text-gray-400 dark:text-neutral-500"
+                      className="shrink-0 size-4 text-gray-800 dark:text-neutral-500"
                       xmlns="http://www.w3.org/2000/svg"
                       width={24}
                       height={24}
@@ -140,14 +140,14 @@ const Login: React.FC = () => {
                   <input
                     type="password"
                     id="hs-cover-with-gradient-form-password-1"
-                    className="py-3 ps-11 pe-4 block w-full bg-white/10 border-white/20 text-white placeholder:text-white rounded-lg text-sm focus:border-white/30 focus:ring-white/30 sm:p-4 sm:ps-11"
+                    className="py-3 ps-11 pe-4 block w-full bg-white/20 border-white/20 text-black placeholder:text-white rounded-lg text-sm focus:border-white/30 focus:ring-white/30 sm:p-4 sm:ps-20"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
-                  <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
+                  <div className="absolute inset-y-0 start-10 flex items-center pointer-events-none z-20 ps-4">
                     <svg
-                      className="shrink-0 size-4 text-gray-400 dark:text-neutral-500"
+                      className="shrink-0 size-4 text-gray-800 dark:text-neutral-500"
                       xmlns="http://www.w3.org/2000/svg"
                       width={24}
                       height={24}
@@ -165,12 +165,12 @@ const Login: React.FC = () => {
                 </div>
               </div>
               {errorMessage && (
-                <p className="text-red-500 text-sm">{errorMessage}</p>
+                <p className="text-red-500 text-lg font-semibold">{errorMessage}</p>
               )}
               <div className="grid">
                 <button
                   type="submit"
-                  className="sm:p-4 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-white/10 text-white hover:bg-white/20 focus:outline-none focus:bg-white/20 disabled:opacity-50 disabled:pointer-events-none"
+                  className="sm:p-6 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-300 text-white hover:bg-white/20 focus:outline-none focus:bg-white/20 disabled:opacity-50 disabled:pointer-events-none"
                 >
                   Connexion
                   <svg
@@ -199,12 +199,6 @@ const Login: React.FC = () => {
         <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm text-white/50">
             © 2024 KingAccess. Un produit fait pour vous.
-            <a
-              className="text-white font-medium hover:text-white/80 focus:outline-none focus:text-white/80"
-              href="../index.html"
-            >
-              Accueil
-            </a>
           </p>
         </div>
       </footer>

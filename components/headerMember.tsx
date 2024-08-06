@@ -61,7 +61,6 @@ const HeaderMember: React.FC = () => {
           <nav className="container mx-auto flex justify-between items-center p-4">
             <div className="flex space-x-4">
               <a href="/" className="text-gray-700 hover:text-blue-500">Accueil</a>
-              <a href="/aPropos" className="text-gray-700 hover:text-blue-500">A propos</a>
               {user && (
                 <>
                   <a href="/bourso2" className="text-gray-700 hover:text-blue-500">Boursorama</a>
