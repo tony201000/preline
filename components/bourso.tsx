@@ -1,5 +1,7 @@
 'use client';
+
 import React, { useState } from 'react';
+import Image from 'next/image';
 import ProtectedRoute from './protectedRoute';
 
 const images: string[] = [
@@ -43,29 +45,29 @@ const Bourso: React.FC = () => {
           <div className="space-y-5 md:space-y-8">
             <div className="space-y-3">
               <h2 className="text-2xl font-bold md:text-3xl dark:text-white">
-                L&apos;offre la plus convoitee depuis des annees avec Boursorama
+                L&apos;offre la plus convoitée depuis des années avec Boursorama
               </h2>
               <p className="text-lg text-gray-800 dark:text-neutral-200">
-                Retrouvez en image ci-dessous toutes les informations sur l&apos;offre Boursorama qui fait des milliers d&apos;heureux chaque annee.
+                Retrouvez en image ci-dessous toutes les informations sur l&apos;offre Boursorama qui fait des milliers d&apos;heureux chaque année.
               </p>
             </div>
             <p className="text-lg text-gray-800 dark:text-neutral-200">
-              Comme toutes nos offres sur ce site, elles sont 100% gratuites et sans engagement. L&apos;offre de Boursorama est divisee en 3 parties. 
-              L&apos;ordre doit etre respecte pour beneficier de l&apos;ensemble des primes, mais vous pouvez aussi choisir de ne pas beneficier de certaines primes si vous le souhaitez.
-              Vous pouvez par exemple beneficier de l&apos;offre de bienvenue sans condition 1, et ensuite decider de ne pas beneficier des autres primes.
+              Comme toutes nos offres sur ce site, elles sont 100% gratuites et sans engagement. L&apos;offre de Boursorama est divisée en 3 parties. 
+              L&apos;ordre doit être respecté pour bénéficier de l&apos;ensemble des primes, mais vous pouvez aussi choisir de ne pas bénéficier de certaines primes si vous le souhaitez.
+              Vous pouvez par exemple bénéficier de l&apos;offre de bienvenue sans condition 1, et ensuite décider de ne pas bénéficier des autres primes.
             </p>
             <p className="text-lg text-gray-800 dark:text-neutral-200">
-              1- Une prime de bienvenue de 70&euro; offerte pour toute ouverture de compte sans condition ! Pas besoin de deposer de l&apos;argent ou d&apos;utiliser le compte.
+              1- Une prime de bienvenue de 70&euro; offerte pour toute ouverture de compte sans condition ! Pas besoin de déposer de l&apos;argent ou d&apos;utiliser le compte.
               Pour un compte 100% gratuit et sans conditions, choisissez l&apos;option sans carte bancaire ou l&apos;option avec carte virtuelle. Les cartes physiques sont gratuites sous condition d&apos;utilisation mensuelle.
             </p>
             <p className="text-lg text-gray-800 dark:text-neutral-200">
-              2- Une prime de 80&euro; offerte pour tout depot de 300&euro; minimum sur le compte, ou de 40&euro; pour tout depot entre 50&euro; et 299&euro;.
-              L&apos;argent est a vous et peut etre retire a tout moment, sans frais. C&apos;est comme ci vous faisiez un virement de votre compte courant vers votre livret A.
+              2- Une prime de 80&euro; offerte pour tout dépôt de 300&euro; minimum sur le compte, ou de 40&euro; pour tout dépôt entre 50&euro; et 299&euro;.
+              L&apos;argent est à vous et peut être retiré à tout moment, sans frais. C&apos;est comme si vous faisiez un virement de votre compte courant vers votre livret A.
             </p>
             <p className="text-lg text-gray-800 dark:text-neutral-200">
-              3- Une prime de 70&euro; offerte pour toute souscription au service gratuit EasyMove qui permet de domicilier automatiquement vos prelevements et virements recurents de votre ancien compte vers votre nouveau compte Boursorama.
+              3- Une prime de 70&euro; offerte pour toute souscription au service gratuit EasyMove qui permet de domicilier automatiquement vos prélèvements et virements récurrents de votre ancien compte vers votre nouveau compte Boursorama.
             </p>
-            {/* debut galerie*/}
+            {/* début galerie */}
             <div className="w-full object-cover rounded-xl">
               <div className="flex items-center">
                 <button
@@ -76,22 +78,26 @@ const Bourso: React.FC = () => {
                 </button>
                 <div className="flex overflow-hidden w-full">
                   {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`Image ${currentIndex + index + 1}`}
-                      className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-                      onClick={() => openFullscreen(currentIndex + index)}
-                    />
+                    <div key={index} className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200" onClick={() => openFullscreen(currentIndex + index)}>
+                      <Image
+                        src={image}
+                        alt={`Image ${currentIndex + index + 1}`}
+                        width={500}
+                        height={500}
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
                   ))}
                   {currentIndex + 3 > images.length && images.slice(0, (currentIndex + 3) % images.length).map((image, index) => (
-                    <img
-                      key={images.length + index}
-                      src={image}
-                      alt={`Image ${index + 1}`}
-                      className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-                      onClick={() => openFullscreen(index)}
-                    />
+                    <div key={images.length + index} className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200" onClick={() => openFullscreen(index)}>
+                      <Image
+                        src={image}
+                        alt={`Image ${index + 1}`}
+                        width={500}
+                        height={500}
+                        className="w-full h-auto rounded-lg"
+                      />
+                    </div>
                   ))}
                 </div>
                 <button
@@ -111,9 +117,11 @@ const Bourso: React.FC = () => {
                   >
                     &times;
                   </button>
-                  <img
+                  <Image
                     src={images[currentIndex]}
                     alt={`Image ${currentIndex + 1}`}
+                    width={1000}
+                    height={1000}
                     className="h-auto max-h-full max-w-full object-contain"
                   />
                   <button
@@ -131,6 +139,7 @@ const Bourso: React.FC = () => {
                 </div>
               )}
             </div>
+            {/* fin galerie */}
             <p className="text-lg text-gray-800 dark:text-neutral-200">
               As we&apos;ve grown, we&apos;ve seen how Preline has helped companies such as
               Spotify, Microsoft, Airbnb, Facebook, and Intercom bring their

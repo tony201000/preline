@@ -1,6 +1,8 @@
 // app/components/galerieb.tsx
 'use client';
+
 import React, { useState } from 'react';
+import Image from 'next/image';
 import ProtectedRoute from './protectedRoute';
 
 const images: string[] = [
@@ -11,9 +13,8 @@ const images: string[] = [
   'https://zupimages.net/up/24/31/uf7g.jpg',
   'https://zupimages.net/up/24/31/dwn1.jpg',
   'https://zupimages.net/up/24/31/o3ld.jpg',
-  // Ajoutez d&rsquo;autres URL d&rsquo;images ici
+  // Ajoutez d’autres URL d’images ici
 ];
-
 
 const Galerieb: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -47,22 +48,26 @@ const Galerieb: React.FC = () => {
         </button>
         <div className="flex overflow-hidden w-full">
           {images.slice(currentIndex, currentIndex + 3).map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Image ${currentIndex + index + 1}`}
-              className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-              onClick={() => openFullscreen(currentIndex + index)}
-            />
+            <div key={index} className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200" onClick={() => openFullscreen(currentIndex + index)}>
+              <Image
+                src={image}
+                alt={`Image ${currentIndex + index + 1}`}
+                width={500}
+                height={500}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
           ))}
           {currentIndex + 3 > images.length && images.slice(0, (currentIndex + 3) % images.length).map((image, index) => (
-            <img
-              key={images.length + index}
-              src={image}
-              alt={`Image ${index + 1}`}
-              className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200"
-              onClick={() => openFullscreen(index)}
-            />
+            <div key={images.length + index} className="w-1/3 h-auto cursor-pointer rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200" onClick={() => openFullscreen(index)}>
+              <Image
+                src={image}
+                alt={`Image ${index + 1}`}
+                width={500}
+                height={500}
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
           ))}
         </div>
         <button
@@ -82,9 +87,11 @@ const Galerieb: React.FC = () => {
           >
             &times;
           </button>
-          <img
+          <Image
             src={images[currentIndex]}
             alt={`Image ${currentIndex + 1}`}
+            width={1000}
+            height={1000}
             className="h-auto max-h-full max-w-full object-contain"
           />
           <button
