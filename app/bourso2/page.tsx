@@ -2,6 +2,7 @@
 import React from 'react';
 import Bourso from '@/components/bourso';
 import HeaderMember from '@/components/headerMember';
+import ProtectedRoute from '@/components/protectedRoute';
 
 const BoursoPage = () => {
   return (
@@ -9,7 +10,9 @@ const BoursoPage = () => {
     <div>
         <HeaderMember />
         <div className="pt-20">
+            <ProtectedRoute>
             <Bourso />
+            </ProtectedRoute>
         </div>
     </div>
     </>

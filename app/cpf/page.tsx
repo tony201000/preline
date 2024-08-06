@@ -18,7 +18,6 @@ const CPFPage = () => {
             <HeroCpf />
             <CPF />
             <FaqCPF />
-            <ModuleCalCpf />
             </ProtectedRoute>
         </div>
     </div>
