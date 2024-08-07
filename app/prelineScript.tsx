@@ -15,12 +15,30 @@ export default function PrelineScript() {
 
   useEffect(() => {
     const loadPreline = async () => {
-      await import('preline/preline')
-      window.HSStaticMethods.autoInit()
-    }
-    loadPreline()
-  }, [path])
+      await import('preline/preline');
 
+      const initializePreline = () => {
+        try {
+          if (window.HSStaticMethods && typeof window.HSStaticMethods.autoInit === 'function') {
+            window.HSStaticMethods.autoInit();
+          } else {
+            console.error("HSStaticMethods.autoInit is not available");
+          }
+        } catch (error) {
+          console.error("Error during HSStaticMethods.autoInit:", error);
+          setTimeout(initializePreline, 100); // Retry initialization after a short delay
+        }
+      };
+
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        initializePreline();
+      } else {
+        document.addEventListener('DOMContentLoaded', initializePreline);
+      }
+    };
+
+    loadPreline();
+  }, [path]);
 
   return null;
 }

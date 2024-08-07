@@ -1,6 +1,6 @@
 'use client';
 
-import ParrainageBourso from "./parrainageBourso";
+import ParrainageBourso from "./redirections/parrainageBourso";
 import SvgBoursorama from "./svg/svgBoursorama";
 import SvgComingSoon from "./svg/svgComingSoon";
 import SvgCPF from "./svg/svgCPF";

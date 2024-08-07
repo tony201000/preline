@@ -1,8 +1,8 @@
 // app/cpf/page.tsx
 import React from 'react';
 import CardMenu from '../../components/cardMenu';
-import HeaderMember from '../../components/headerMember';
-import ProtectedRoute from '@/components/protectedRoute';
+import HeaderMember from '../../components/global/headerMember';
+import ProtectedRoute from '../../components/protectedRoute';
 
 
 const Dashboard = () => {

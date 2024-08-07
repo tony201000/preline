@@ -1,7 +1,7 @@
 // app/cpf/page.tsx
 import React from 'react';
-import Galerieb from '../../../components/galerieb';
-import ProtectedRoute from '@/components/protectedRoute';
+import Galerieb from '../../../components/NoUse/galerieb';
+import ProtectedRoute from '../../../components/protectedRoute';
 
 
 

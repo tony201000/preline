@@ -1,7 +1,7 @@
 // app/components/header.tsx
 'use client';
 import React, { useState, useEffect } from 'react';
-import { auth, logout, signIn  } from '../firebase';
+import { auth, logout, signIn  } from '../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
 const HeaderMember: React.FC = () => {

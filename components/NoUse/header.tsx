@@ -1,7 +1,7 @@
 // app/components/header.tsx
 'use client';
 import React, { useState } from 'react';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const Header: React.FC = () => {

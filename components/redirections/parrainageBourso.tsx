@@ -1,9 +1,6 @@
 'use client';
 
 import React from 'react';
-import ProtectedRoute from './protectedRoute';
-
-
 
   const ParrainageBourso: React.FC = () => {
     const openBoursobank = () => {

@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import ProtectedRoute from './protectedRoute';
 
 const ModuleCalCpf: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -2,7 +2,6 @@
 // app/CalculDeMontant.tsx
 
 import React, { useState } from 'react';
-import ProtectedRoute from './protectedRoute';
 
 const CalculDeMontant: React.FC = () => {
   const [montantInitial, setMontantInitial] = useState<number | string>('');

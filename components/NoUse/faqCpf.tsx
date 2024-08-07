@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react'
-import ModuleCalCpf from './modal';
+import ModuleCalCpf from '../moduleMontantCPF/modal';
 
 const FaqCPF = () => (
   <>

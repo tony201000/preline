@@ -3,8 +3,8 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
-import SeConnecterBleu from './boutons/seConnecterBleu';    
+import { auth } from '../../firebase';
+import SeConnecterBleu from '../boutons/seConnecterBleu';    
 
 
 const Index: React.FC = () => {

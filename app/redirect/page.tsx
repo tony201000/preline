@@ -1,7 +1,7 @@
 // app/cpf/page.tsx
 import React from 'react';
 import Redirect from '../../components/redirect';
-import ProtectedRoute from '@/components/protectedRoute';
+import ProtectedRoute from '../../components/protectedRoute';
 
 
 

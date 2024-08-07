@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import ModuleCalCpf from './modal';
+import ModuleCalCpf from '../../moduleMontantCPF/modal';
 import Image from 'next/image';
 
 const CPF: React.FC = () => {

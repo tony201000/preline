@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import HeaderMember from '@/components/headerMember';
-import Index from '@/components/index';
+import HeaderMember from '../components/global/headerMember';
+import Index from '../components/pages/index';
 
 const HomePage: React.FC = () => {
   return (

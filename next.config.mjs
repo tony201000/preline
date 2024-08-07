@@ -18,6 +18,12 @@ const nextConfig = {
         pathname: '/**',
       },
       {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "/dwi9ujatc/**",
+      },
+      {
         protocol: 'https',
         hostname: 'i.ibb.co',
         port: '',
