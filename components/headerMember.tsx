@@ -2,7 +2,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { auth, logout, signIn  } from '../firebase';
-import { signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const HeaderMember: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,11 +60,11 @@ const HeaderMember: React.FC = () => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <nav className="container mx-auto flex justify-between items-center p-4">
             <div className="flex space-x-4">
-              <a href="/" className="text-gray-700 hover:text-blue-500">Accueil</a>
+              <a href="/dashboard" className="text-gray-700 hover:text-blue-500">Accueil</a>
               {user && (
                 <>
-                  <a href="/bourso2" className="text-gray-700 hover:text-blue-500">Boursorama</a>
-                  <a href="/cpf" className="text-gray-700 hover:text-blue-500">CPF</a>
+                  <a href="/dashboard/bourso2" className="text-gray-700 hover:text-blue-500">Boursorama</a>
+                  <a href="/dashboard/cpf" className="text-gray-700 hover:text-blue-500">CPF</a>
                 </>
               )}
             </div>

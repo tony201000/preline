@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const Redirect: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = 'https://www.boursobank.com/ouvrir-un-compte';
+      window.open('https://bour.so/1lZ3jMeVAO', '_blank');
     }, 10000); // redirection après 5 secondes
 
     return () => clearTimeout(timer);
@@ -24,6 +24,7 @@ const Redirect: React.FC = () => {
       <p className="mb-2">Nom : <strong>{nom}</strong></p>
       <p className="mb-2">Prénom : <strong>{prenom}</strong></p>
       <p className="mt-4">Redirection dans quelques secondes...</p>
+      <p className="mt-4"><a href='https://bour.so/1lZ3jMeVAO' target="_blank">ou cliquez ici pour acceder au site</a></p>
     </div>
   );
 };

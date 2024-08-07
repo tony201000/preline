@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import ProtectedRoute from './protectedRoute';
 
 const images: string[] = [
   'https://zupimages.net/up/24/31/v3l9.jpg',

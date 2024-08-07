@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import ModuleCalCpf from './modal';
 import Image from 'next/image';
-import ProtectedRoute from './protectedRoute';
 
 const CPF: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -48,7 +47,7 @@ const CPF: React.FC = () => {
               <div className="flex gap-x-5 ms-1">
                 {/* Icon */}
                 <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
+                  <div className="z-10 size-8 flex justify-center items-center">
                     <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-[#ff0] font-semibold text-xs uppercase rounded-full">
                       1
                     </span>
@@ -62,9 +61,9 @@ const CPF: React.FC = () => {
                       Se connecter au site officiel du CPF.
                     </span>
                     <p>Pour cela vous devez vous connecter sur </p>
-                    <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" className='hover:text-red-900'> moncompteformation.gouv.fr </a>
+                    <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" target='_blank' className='hover:text-red-900'> moncompteformation.gouv.fr </a>
                     et utiliser le service de LAPOSTE : <b>Identité Numérique</b>, pour vous connecter.
-                    <a href="identiteNumerique/" className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
+                    <a href="/dashboard/identiteNumerique" target='_blank' className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
                   </p>
                 </div>
                 {/* End Right Content */}
@@ -74,7 +73,7 @@ const CPF: React.FC = () => {
               <div className="flex gap-x-5 ms-1">
                 {/* Icon */}
                 <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
+                  <div className="z-10 size-8 flex justify-center items-center">
                     <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-[#ff0] font-semibold text-xs uppercase rounded-full">
                       2
                     </span>
@@ -100,7 +99,7 @@ const CPF: React.FC = () => {
               <div className="flex gap-x-5 ms-1">
                 {/* Icon */}
                 <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
+                  <div className="z-10 size-8 flex justify-center items-center">
                     <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-[#ff0] font-semibold text-xs uppercase rounded-full">
                       3
                     </span>
@@ -122,7 +121,7 @@ const CPF: React.FC = () => {
               <div className="flex gap-x-5 ms-1">
                 {/* Icon */}
                 <div className="relative last:after:hidden after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                  <div className="relative z-10 size-8 flex justify-center items-center">
+                  <div className="z-10 size-8 flex justify-center items-center">
                     <span className="flex shrink-0 justify-center items-center size-8 border border-neutral-800 text-[#ff0] font-semibold text-xs uppercase rounded-full">
                       4
                     </span>
