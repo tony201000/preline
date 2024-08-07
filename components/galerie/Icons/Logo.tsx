@@ -1,4 +1,6 @@
-export default function Logo() {
+import React from 'react';
+
+const Logo: React.FC = () => {
   return (
     <svg
       aria-labelledby="conf-logo-title-header"
@@ -69,3 +71,5 @@ export default function Logo() {
     </svg>
   );
 }
+
+export default Logo;  

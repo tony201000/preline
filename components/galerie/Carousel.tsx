@@ -1,9 +1,9 @@
-import Image from "next/image"; // Importation du composant Image de Next.js pour l'affichage des images
-import { useRouter } from "next/router"; // Importation du hook useRouter de Next.js pour manipuler la navigation
-import type { ImageProps } from "../../utils/types"; // Importation du type ImageProps pour définir les propriétés des images
-import { useLastViewedPhoto } from "../../utils/useLastViewedPhoto"; // Importation du hook personnalisé pour accéder à l'état global de la dernière photo vue
-import SharedModal from "./SharedModal"; // Importation du composant SharedModal pour afficher les détails de la photo
-import useKeypress from "react-use-keypress"; // Importation du hook useKeypress pour détecter les pressions sur les touches du clavier
+import Image from "next/image";
+import { useRouter } from "next/router";
+import type { ImageProps } from "../../utils/types";
+import { useLastViewedPhoto } from "../../utils/useLastViewedPhoto";
+import SharedModal from "./SharedModal";
+import useKeypress from "react-use-keypress";
 
 /**
  * Composant Carousel affichant une photo en plein écran avec un fond flou et un modal de partage.

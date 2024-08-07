@@ -1,4 +1,6 @@
-export default function Bridge() {
+import React from 'react';
+
+const Bridge: React.FC = () => {
   return (
     <svg
       aria-labelledby="conf-city-title"
@@ -124,3 +126,5 @@ export default function Bridge() {
     </svg>
   );
 }
+
+export default Bridge;

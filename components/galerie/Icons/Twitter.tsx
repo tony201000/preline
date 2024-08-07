@@ -1,4 +1,14 @@
-export default function Twitter(props: any) {
+import React from "react";
+
+interface TwitterProps extends React.SVGProps<SVGSVGElement> {}
+
+/**
+ * Composant Twitter affichant l'icône Twitter en SVG.
+ * 
+ * @param props - Propriétés SVG héritées pour personnaliser l'icône
+ * @returns L'icône Twitter en SVG
+ */
+export default function Twitter(props: TwitterProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
