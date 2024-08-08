@@ -1,29 +1,26 @@
-// pages/api/images.ts
-import type { NextApiRequest, NextApiResponse } from 'next';
-import cloudinary from '../utils/cloudinary';
-import getBase64ImageUrl from '../utils/generateBlurPlaceholder';
+// /api/images.ts
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
 
+// Configuration de Firebase
+const firebaseConfig = {
+  // Ajoutez votre configuration Firebase ici
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/**
+ * Récupère les images depuis Firestore.
+ */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const results = await cloudinary.v2.search
-      .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-      .sort_by('public_id', 'desc')
-      .max_results(400)
-      .execute();
-
-    const imagesWithBlurDataUrls = await Promise.all(
-      results.resources.map(async (image: any) => ({
-        id: image.asset_id,
-        height: image.height,
-        width: image.width,
-        public_id: image.public_id,
-        format: image.format,
-        blurDataUrl: await getBase64ImageUrl(image),
-      }))
-    );
-
-    res.status(200).json(imagesWithBlurDataUrls);
+    const imagesCollection = collection(db, 'images'); // Remplacez 'images' par le nom de votre collection
+    const snapshot = await getDocs(imagesCollection);
+    const images = snapshot.docs.map(doc => doc.data().url); // Assurez-vous que l'URL de l'image est stockée sous 'url'
+    res.status(200).json(images);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch images' });
+    res.status(500).json({ error: 'Erreur lors de la récupération des images' });
   }
 }

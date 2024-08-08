@@ -21,6 +21,14 @@ export default function PrelineScript() {
         try {
           if (window.HSStaticMethods && typeof window.HSStaticMethods.autoInit === 'function') {
             window.HSStaticMethods.autoInit();
+
+            // Log all elements to debug attributes
+            const allElements = document.querySelectorAll('*');
+            allElements.forEach(el => {
+              if (el.hasAttribute('data-redeviation-bs-uid')) {
+                console.log('Element with data-redeviation-bs-uid:', el);
+              }
+            });
           } else {
             console.error("HSStaticMethods.autoInit is not available");
           }

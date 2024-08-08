@@ -1,78 +1,116 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
-import type { ImageProps } from "../../utils/types";
-import { useLastViewedPhoto } from "../../utils/useLastViewedPhoto";
-import SharedModal from "./SharedModal";
-import useKeypress from "react-use-keypress";
+// /app/carousel/Carousel.tsx
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import FullscreenImage from './FullscreenImage';
+import CarouselIndicator from './CarouselIndicator';
+import axios from 'axios';
+import '@/styles/carousel.module.scss';
 
 /**
- * Composant Carousel affichant une photo en plein écran avec un fond flou et un modal de partage.
- * Permet de fermer le modal et d'utiliser la touche 'Escape' pour fermer le modal.
- * 
- * @param index - Index de la photo actuelle dans la galerie
- * @param currentPhoto - Objet contenant les détails de la photo actuelle
- * @returns Le composant Carousel
+ * Composant principal du carrousel d'images.
  */
-export default function Carousel({
-  index,
-  currentPhoto,
-}: {
-  index: number;
-  currentPhoto: ImageProps;
-}) {
-  const router = useRouter(); // Création du hook de navigation pour manipuler la navigation de l'application
-  const [, setLastViewedPhoto] = useLastViewedPhoto(); // Utilisation du hook personnalisé pour accéder et mettre à jour la photo récemment vue
+const Carousel: React.FC = () => {
+  const [images, setImages] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
+  const [zoomLevel, setZoomLevel] = useState<number>(1);
+  const [autoplay, setAutoplay] = useState<boolean>(true);
 
-  /**
-   * Fonction pour fermer le modal et mettre à jour l'état global avec l'ID de la photo actuelle.
-   * Redirige vers la page d'accueil en utilisant la navigation sans rechargement de la page.
-   */
-  function closeModal() {
-    setLastViewedPhoto(currentPhoto.id); // Met à jour l'état global avec l'ID de la photo actuelle
-    router.push("/", undefined, { shallow: true }); // Redirige vers la page d'accueil sans recharger la page
-  }
+  // Récupération des images depuis l'API
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await axios.get('/api/images');
+        setImages(response.data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des images:', error);
+      }
+    };
+    fetchImages();
+  }, []);
 
-  /**
-   * Fonction pour changer l'ID de la photo actuelle (placeholder pour des fonctionnalités futures).
-   * 
-   * @param newVal - Nouvelle valeur pour l'ID de la photo
-   * @returns La nouvelle valeur pour l'ID de la photo
-   */
-  function changePhotoId(newVal: number) {
-    return newVal; // Retourne la nouvelle valeur (actuellement inutilisé)
-  }
+  // Navigation à gauche
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
 
-  // Détecte la pression sur la touche 'Escape' et ferme le modal
-  useKeypress("Escape", () => {
-    closeModal();
-  });
+  // Navigation à droite
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  // Activation du mode plein écran
+  const handleFullscreen = () => {
+    setIsFullscreen(true);
+  };
+
+  // Désactivation du mode plein écran
+  const closeFullscreen = () => {
+    setIsFullscreen(false);
+    setZoomLevel(1); // Réinitialiser le niveau de zoom
+  };
+
+  // Gestion du zoom
+  const handleZoomIn = () => {
+    setZoomLevel((prevZoom) => prevZoom + 0.1);
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel((prevZoom) => Math.max(prevZoom - 0.1, 1)); // Ne pas descendre en dessous de 1
+  };
+
+  // Autoplay
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (autoplay) {
+      timer = setInterval(() => {
+        handleNext();
+      }, 3000); // Change d'image toutes les 3 secondes
+    }
+    return () => clearInterval(timer);
+  }, [autoplay, currentIndex]);
+
+  // Gestion des gestes de glissement
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const touchStartX = e.touches[0].clientX;
+    const handleTouchMove: EventListener = (e: Event) => {
+      const touchEndX = (e as TouchEvent).touches[0].clientX;
+      if (touchStartX - touchEndX > 50) {
+        handleNext();
+        document.removeEventListener('touchmove', handleTouchMove);
+      } else if (touchEndX - touchStartX > 50) {
+        handlePrev();
+        document.removeEventListener('touchmove', handleTouchMove);
+      }
+    };
+    document.addEventListener('touchmove', handleTouchMove);
+  };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
-      {/* Bouton pour fermer le modal */}
-      <button
-        className="absolute inset-0 z-30 cursor-default bg-black backdrop-blur-2xl"
-        onClick={closeModal}
-      >
-        {/* Affichage de l'image floue de fond si disponible */}
-        {currentPhoto.blurDataUrl && (
-          <Image
-            src={currentPhoto.blurDataUrl} // Source de l'image floue de fond
-            className="pointer-events-none h-full w-full"
-            alt="blurred background" // Texte alternatif pour l'image floue de fond
-            fill // Remplit l'espace du conteneur
-            priority={true} // Indique que l'image doit être chargée en priorité
-          />
-        )}
-      </button>
-      {/* Affichage du modal partagé avec les détails de la photo */}
-      <SharedModal
-        index={index}
-        changePhotoId={changePhotoId}
-        currentPhoto={currentPhoto}
-        closeModal={closeModal}
-        navigation={false} // Désactive la navigation dans le modal
-      />
+    <div className="carousel-container" onTouchStart={handleTouchStart}>
+      <div className="carousel">
+        <button className="carousel-button left" onClick={handlePrev}>❮</button>
+        <img
+          src={images[currentIndex]}
+          alt={`Image ${currentIndex + 1}`}
+          className="carousel-image"
+          onClick={handleFullscreen}
+        />
+        <button className="carousel-button right" onClick={handleNext}>❯</button>
+      </div>
+      <CarouselIndicator currentIndex={currentIndex} totalImages={images.length} />
+      {isFullscreen && (
+        <FullscreenImage
+          src={images[currentIndex]}
+          onClose={closeFullscreen}
+          onZoomIn={handleZoomIn}
+          onZoomOut={handleZoomOut}
+          zoomLevel={zoomLevel}
+        />
+      )}
     </div>
   );
-}
+};
+
+export default Carousel;
