@@ -1,8 +1,8 @@
 // lib/firebase.tsx
 import { initializeApp } from 'firebase/app';
-import { getAuth, signInWithEmailAndPassword, signOut  } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDpCxVRxvUiskME7iwFVz_6hMcPRnH4apQ",
@@ -14,6 +14,7 @@ const firebaseConfig = {
   appId: "1:336289874791:web:3f4f537bdaeffe9e76a5c2",
   measurementId: "G-GSNNFF3BWV"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -27,6 +28,21 @@ export const signIn = (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password);
 };
 
+
 export const logout = () => {
   return signOut(auth);
+};
+
+// Function to get download URL for a file
+export const getFileDownloadURL = (filePath: string) => {
+  const childRef = ref(storage, filePath);
+  return getDownloadURL(childRef)
+    .then((url) => {
+      return url;
+    })
+    .catch((error) => {
+      // Handle errors appropriately
+      console.error("Error getting download URL:", error);
+      throw error; // Re-throw the error to allow for error handling in the calling component
+    });
 };

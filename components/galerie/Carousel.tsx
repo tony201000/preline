@@ -1,9 +1,11 @@
 // /app/carousel/Carousel.tsx
 'use client';
-
 import React, { useEffect, useState } from 'react';
 import FullscreenImage from './FullscreenImage';
 import CarouselIndicator from './CarouselIndicator';
+import CarouselImage from './CarouselImage';
+import CarouselButtons from './CarouselButtons';
+import CarouselContainer from './CarouselContainer';
 import axios from 'axios';
 import '@/styles/carousel.module.scss';
 
@@ -88,16 +90,14 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="carousel-container" onTouchStart={handleTouchStart}>
+    <CarouselContainer onTouchStart={handleTouchStart}>
       <div className="carousel">
-        <button className="carousel-button left" onClick={handlePrev}>❮</button>
-        <img
+        <CarouselButtons onPrev={handlePrev} onNext={handleNext} />
+        <CarouselImage
           src={images[currentIndex]}
           alt={`Image ${currentIndex + 1}`}
-          className="carousel-image"
           onClick={handleFullscreen}
         />
-        <button className="carousel-button right" onClick={handleNext}>❯</button>
       </div>
       <CarouselIndicator currentIndex={currentIndex} totalImages={images.length} />
       {isFullscreen && (
@@ -109,7 +109,7 @@ const Carousel: React.FC = () => {
           zoomLevel={zoomLevel}
         />
       )}
-    </div>
+    </CarouselContainer>
   );
 };
 

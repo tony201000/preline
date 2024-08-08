@@ -6,14 +6,12 @@ import Carousel from '@/components/galerie/Carousel';
 
 const CarouselPage: React.FC = () => {
   return (
-    <>
       <div>
         <HeaderMember />
           <div>
             <Carousel />
           </div>
       </div>
-    </>
   );
 };
 export default CarouselPage; 

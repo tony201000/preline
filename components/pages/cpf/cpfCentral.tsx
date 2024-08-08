@@ -63,7 +63,7 @@ const CPF: React.FC = () => {
                     <p>Pour cela vous devez vous connecter sur </p>
                     <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" target='_blank' className='hover:text-red-900'> moncompteformation.gouv.fr </a>
                     et utiliser le service de LAPOSTE : <b>Identité Numérique</b>, pour vous connecter.
-                    <a href="/dashboard/cpf/identiteNumerique" target='_blank' className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
+                    <a href="/dashboard/cpf/Carousel" target='_blank' className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
                   </p>
                 </div>
                 {/* End Right Content */}

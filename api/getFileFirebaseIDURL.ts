@@ -2,12 +2,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+
 /**
  * Récupère les images depuis Firestore.
  */
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const imagesCollection = collection(db, 'images'); // Remplacez 'images' par le nom de votre collection
+    const imagesCollection = collection(db, 'carousel'); // Remplacez 'carousel' par le nom de votre collection
     const snapshot = await getDocs(imagesCollection);
 
     // Extraire les URLs des images
