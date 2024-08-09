@@ -1,9 +1,22 @@
 // /styles/carousel.scss
+.carousel-image-container {
+  position: relative; // Nécessaire pour le composant Image
+  width: 100%;
+  cursor: pointer;
+}
+
+.carousel-image {
+  width: 100%; // Utilisez 100% pour s'adapter au conteneur
+  height: auto; // Maintient les proportions de l'image
+  transition: transform 0.3s ease;
+}
+
 .carousel-container {
   position: relative;
   width: 100%;
   max-width: 800px; // Ajustez selon vos besoins
-  margin: auto;
+  margin: 0 auto; // Centre le conteneur horizontalement
+  overflow: hidden; // Assure que le contenu ne déborde pas
 }
 
 .carousel {
@@ -12,6 +25,7 @@
   align-items: center;
   position: relative;
 }
+
 
 .carousel-button {
   background: transparent;
@@ -30,13 +44,6 @@
 
 .right {
   right: 5%;
-}
-
-.carousel-image {
-  width: 90%;
-  max-width: 100%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .carousel-indicators {
@@ -58,17 +65,38 @@
   background: black;
 }
 
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
 .fullscreen-container {
-  position: fixed;
+  position: fixed; // Fixe le conteneur en plein écran
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); // Fond sombre pour le plein écran
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  z-index: 1000;
+  justify-content: center;
+  z-index: 1000; // Assure que le conteneur est au-dessus des autres éléments
+}
+.fullscreen-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease;
 }
 
 .close-button {
@@ -80,17 +108,6 @@
   font-size: 2rem;
   color: white;
   cursor: pointer;
-}
+  z-index: 1001;
 
-.zoom-controls {
-  position: absolute;
-  bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.fullscreen-image {
-  max-width: 100%;
-  max-height: 100%;
-  transition: transform 0.2s;
 }

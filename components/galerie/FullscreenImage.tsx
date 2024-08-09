@@ -1,5 +1,6 @@
-// /components/FullscreenImage.tsx
+'use client';
 import React from 'react';
+import Image from 'next/image'; // Import du composant Image de Next.js
 
 /**
  * Composant pour afficher l'image en plein écran.
@@ -20,12 +21,16 @@ const FullscreenImage: React.FC<FullscreenImageProps> = ({ src, onClose, onZoomI
         <button onClick={onZoomOut}>-</button>
         <button onClick={onZoomIn}>+</button>
       </div>
-      <img
-        src={src}
-        alt="Fullscreen"
-        className="fullscreen-image"
-        style={{ transform: `scale(${zoomLevel})` }}
-      />
+      <div className="fullscreen-image-wrapper">
+        <Image
+          src={src}
+          alt="Fullscreen"
+          layout="fill" // Remplit le conteneur parent
+          objectFit="contain" // Maintient l'image dans le conteneur sans déformation
+          className="fullscreen-image"
+          style={{ transform: `scale(${zoomLevel})` }}
+        />
+      </div>
     </div>
   );
 };

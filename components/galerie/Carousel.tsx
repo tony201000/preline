@@ -79,7 +79,7 @@ const Carousel: React.FC = () => {
       }, 3000); // Change d'image toutes les 3 secondes
     }
     return () => clearInterval(timer);
-  }, [autoplay, currentIndex]);
+  }, [autoplay, currentIndex, handleNext]);
 
   // Gestion des gestes de glissement
   const handleTouchStart = (e: React.TouchEvent) => {
