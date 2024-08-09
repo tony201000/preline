@@ -1,4 +1,3 @@
-// /app/carousel/Carousel.tsx
 'use client';
 import React, { useEffect, useState } from 'react';
 import FullscreenImage from './FullscreenImage';
@@ -6,7 +5,6 @@ import CarouselIndicator from './CarouselIndicator';
 import CarouselImage from './CarouselImage';
 import CarouselButtons from './CarouselButtons';
 import CarouselContainer from './CarouselContainer';
-import axios from 'axios';
 import '@/styles/carousel.module.scss';
 
 /**
@@ -19,12 +17,16 @@ const Carousel: React.FC = () => {
   const [zoomLevel, setZoomLevel] = useState<number>(1);
   const [autoplay, setAutoplay] = useState<boolean>(true);
 
-  // Récupération des images depuis l'API
+  // Récupération des images depuis l'API avec fetch
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get('/api/images');
-        setImages(response.data);
+        const response = await fetch('/api/images');
+        if (!response.ok) {
+          throw new Error(`Erreur HTTP! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setImages(data);
       } catch (error) {
         console.error('Erreur lors de la récupération des images:', error);
       }

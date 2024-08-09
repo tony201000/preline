@@ -34,7 +34,7 @@ export const logout = () => {
 };
 
 // Function to get download URL for a file
-export const getFileDownloadURL = (filePath: string) => {
+const getFileDownloadURL = (filePath: string) => {
   const childRef = ref(storage, filePath);
   return getDownloadURL(childRef)
     .then((url) => {
@@ -46,3 +46,5 @@ export const getFileDownloadURL = (filePath: string) => {
       throw error; // Re-throw the error to allow for error handling in the calling component
     });
 };
+
+export default { getFileDownloadURL };
