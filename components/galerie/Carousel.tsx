@@ -6,10 +6,16 @@ import CarouselImage from './CarouselImage';
 import CarouselButtons from './CarouselButtons';
 import CarouselContainer from './CarouselContainer';
 import '@/styles/carousel.module.scss';
+import { ref, getDownloadURL } from "firebase/storage";
 
 /**
  * Composant principal du carrousel d'images.
  */
+
+
+
+
+
 const Carousel: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
