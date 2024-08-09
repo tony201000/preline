@@ -38,8 +38,8 @@ const CPF: React.FC = () => {
             <div>
               {/* Heading */}
               <div className="mb-4">
-                <h3 className="text-[#ff0] text-xs font-medium uppercase">
-                  Étapes
+                <h3 className="text-[#ff0] text-lg font-medium uppercase">
+                  4 Étapes rapides pour un Noël avant l&rsquo;heure:
                 </h3>
               </div>
               {/* End Heading */}
@@ -63,7 +63,7 @@ const CPF: React.FC = () => {
                     <p>Pour cela vous devez vous connecter sur </p>
                     <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" target='_blank' className='hover:text-red-900'> moncompteformation.gouv.fr </a>
                     et utiliser le service de LAPOSTE : <b>Identité Numérique</b>, pour vous connecter.
-                    <a href="/dashboard/cpf/Carousel" target='_blank' className="text-sm lg:text-base hover:text-red-900 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
+                    <a href="/dashboard/cpf/Carousel" target='_blank' className="text-sm lg:text-base hover:text-red-600 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
                   </p>
                 </div>
                 {/* End Right Content */}

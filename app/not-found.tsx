@@ -1,4 +1,6 @@
-export const Foo = () => (
+const NotFound= () => {
+
+  return (
   <div className="max-w-[50rem] flex flex-col mx-auto size-full">
     {/* ========== HEADER ========== */}
     <header className="mb-auto flex justify-center z-50 w-full py-4">
@@ -60,4 +62,6 @@ export const Foo = () => (
     </footer>
     {/* ========== END FOOTER ========== */}
   </div>
-)
+);
+};
+export default NotFound;

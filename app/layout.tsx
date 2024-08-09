@@ -19,13 +19,13 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="See pictures from Next.js Conf and the After Party." />
-        <meta property="og:site_name" content="nextjsconf-pics.vercel.app" />
-        <meta property="og:description" content="See pictures from Next.js Conf and the After Party." />
-        <meta property="og:title" content="Next.js Conf 2022 Pictures" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Next.js Conf 2022 Pictures" />
-        <meta name="twitter:description" content="See pictures from Next.js Conf and the After Party." />
+        <meta name="description" content="An amazing jewel" />
+        <meta property="og:site_name" content="preline.app" />
+        <meta property="og:description" content="An amazing jewel." />
+        <meta property="og:title" content="An amazing Jewel" />
+        <meta name="twitter:card" content="An amazing Jewel" />
+        <meta name="twitter:title" content="An amazing Jewel" />
+        <meta name="twitter:description" content="SAn amazing Jewel." />
       </head>
       <body className={inter.className}>
         {children}

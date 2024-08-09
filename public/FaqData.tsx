@@ -9,17 +9,17 @@ const FaqData = () => {
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-one",
       question: "En quoi consiste la formation dans laquelle je serais inscrit ?",
-      answer: "La formation dans laquelle vous serez inscrit est un bilan de compétences 100% en ligne. Le centre de formation dont elle fait partie est entièrement reconnu par L&rsquo;Etat."
+      answer: "La formation dans laquelle tu sera inscrit est un bilan de compétences 100% en ligne. Le centre de formation dont elle fait partie est entièrement reconnu par L&rsquo;Etat."
     },
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-two",
       question: "Dois-je suivre cette formation ?",
-      answer: "Non, Vous ne devrez suivre aucune formation. Cependant, vous recevrez par mail les documents comme-ci vous suiviez une formation. Vous n&rsquo;avez pas besoin d&rsquo;y répondre ou de signer quoique ce soit."
+      answer: "Non, tu ne devras suivre aucune formation. Cependant, tu recevras par mail les documents comme-ci tu suivais une formation. Tu n&rsquo;as pas besoin d&rsquo;y répondre ou de signer quoique ce soit."
     },
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-three",
       question: "J&rsquo;ai recu un mail m&rsquo;invitant à un appel vidéo. Dois-je y participer ?",
-      answer: "Non, comme indiqué précédemment, vous n&rsquo;avez pas besoin de répondre aux mails ou appels vidéos. Ils sont envoyés dans le but de rendre officiel le fait que vous suiviez une formation."
+      answer: "Non, comme indiqué précédemment, tu n&rsquo;as pas besoin de répondre aux mails ou appels vidéos. Ne t&rsquo;inquiète pas, j&rsquo;entend par appel vidéo la demande de participation à un appel vidéo par mail, tu ne seras pas derangé par un appel vidéo inopiné."
     },
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-four",
@@ -34,9 +34,9 @@ const FaqData = () => {
       answer: (
         <FormattedAnswer
           content={{
-            text: "En effet, il est impossible de récupérer tout l’argent qui est sur votre compte de formation car pour pouvoir accéder à cet argent bloqué, le centre de formation doit effectuer des démarches et cela a un coût! Voici ce qui est déduit du montant total :",
+            text: "Il est impossible de récupérer la totalité du montant affiché sur votre compte de formation pour la bonne raison que le centre de formation doit effectuer des démarches pour rendre ton argent disponible et cela a un coût! Par transpqrence, voici ce qui est déduit du montant total :",
             listItems: [
-              "Les taxes perçues par l’URSAAF : 23,6%",
+              "Les taxes perçues par l&rsquo;URSAAF : 23,6%",
               "Le montant nécessaire au centre de formation pour mener les démarches : salaires, suivi du dossier...",
               "Une commission de 100 euros"
             ],
@@ -47,13 +47,18 @@ const FaqData = () => {
     },
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-six",
-      question: "Est-ce qu’il y a un risque ?",
-      answer: "La société qui vous propose de récupérer votre argent est une société 100% légale. Elle est enregistrée au RCS de Paris, et est listée officiellement dans les sociétés partenaires sur le site du CPF. Pourquoi risquerait-elle de tuer la poule aux oeufs d’or ?"
+      question: "Est-ce qu&rsquo;il y a un risque ?",
+      answer: "La personne qui se propose de débloquer ton argent possede une société 100% légale enregistrée au RCS de Paris, et comme tu le verras en lancant la procédure elle est officiellement listée dans les sociétés partenaires sur le site du CPF."
     },
     {
       id: "hs-basic-with-title-and-arrow-stretched-heading-seven",
       question: "Est-ce que cette offre est permanente ?",
-      answer: "Il n'y a pas de date limite pour demander à récupérer votre argent. Ce qui veut dire que l'offre n'a pas de fin défini, elle peut durer plusieurs mois, années, ou quelques jours seulement."
+      answer: "Il n&rsquo;y a pas de date limite fixée mais l&rsquo;offre durer plusieurs mois, années, ou seulement quelques jours."
+    },
+    {
+      id: "hs-basic-with-title-and-arrow-stretched-heading-height",
+      question: "Quand et comment je toucherais l&rsquo;argent ?",
+      answer: "L&rsquo;argent sera envoyé à ton ami apres environ 7 à 10 jours qui te le transmettra alors par virement bancaire, cryptomonnaie ou autre moyen de ton choix."
     }
   ];
 
