@@ -57,6 +57,23 @@
     "singleProjectMode": true,
     "functions": {
       "port": 5001
+    },
+    "hosting": {
+      "port": 5000
     }
+  },
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
