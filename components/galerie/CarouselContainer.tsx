@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+
 // /app/carousel/CarouselContainer.tsx
 "use client";
 import React from "react";

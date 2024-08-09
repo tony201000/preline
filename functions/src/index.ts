@@ -1,5 +1,5 @@
 "use strict";
 
-export {generateUploadUrl} from "./generateUploadUrl";
+export { generateUploadUrl } from "./generateUploadUrl";
 
-export {onUserCreate} from "./onUserCreate";
+export { onUserCreate } from "./onUserCreate";

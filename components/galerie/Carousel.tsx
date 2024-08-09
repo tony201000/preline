@@ -1,3 +1,6 @@
+// eslint-disable-next-line no-unused-vars
+
+
 "use client";
 import React, { useEffect, useState } from "react";
 import FullscreenImage from "./FullscreenImage";
