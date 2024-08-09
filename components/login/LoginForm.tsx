@@ -1,8 +1,8 @@
 // /app/login/LoginForm.tsx
-'use client';
-import React from 'react';
-import InputField from './InputField';
-import RememberMeCheckbox from './RememberMeCheckBox';
+"use client";
+import React from "react";
+import InputField from "./InputField";
+import RememberMeCheckbox from "./RememberMeCheckBox";
 
 interface LoginFormProps {
   email: string;
@@ -17,7 +17,15 @@ interface LoginFormProps {
 /**
  * Composant pour le formulaire de connexion.
  */
-const LoginForm: React.FC<LoginFormProps> = ({ email, password, setEmail, setPassword, handleLogin, rememberMe, setRememberMe }) => {
+const LoginForm: React.FC<LoginFormProps> = ({
+  email,
+  password,
+  setEmail,
+  setPassword,
+  handleLogin,
+  rememberMe,
+  setRememberMe,
+}) => {
   return (
     <form onSubmit={handleLogin}>
       <div className="grid gap-y-4">
@@ -37,7 +45,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ email, password, setEmail, setPas
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <a className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium" href="../examples/html/modal-recover-account.html">Mot de passe oublié ?</a>
+            <a
+              className="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium"
+              href="../examples/html/modal-recover-account.html"
+            >
+              Mot de passe oublié ?
+            </a>
           </div>
         </div>
         <RememberMeCheckbox

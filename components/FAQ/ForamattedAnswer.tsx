@@ -1,6 +1,6 @@
 // FormattedAnswer.tsx
-import React from 'react';
-import ModuleCalCpf from '../moduleMontantCPF/modal';
+import React from "react";
+import ModuleCalCpf from "../moduleMontantCPF/modal";
 
 interface FormattedAnswerProps {
   content: {
@@ -21,7 +21,8 @@ const FormattedAnswer: React.FC<FormattedAnswerProps> = ({ content }) => {
       </ul>
       {content.module && (
         <div>
-          Vérifie le montant que tu peux toucher grâce à ce module: <ModuleCalCpf />
+          Vérifie le montant que tu peux toucher grâce à ce module:{" "}
+          <ModuleCalCpf />
         </div>
       )}
     </div>

@@ -1,8 +1,8 @@
 // FaqCPF.tsx
-'use client';
+"use client";
 
-import React from 'react';
-import FaqData from '../../../public/FaqData';
+import React from "react";
+import FaqData from "../../../public/FaqData";
 
 const FaqCPF = () => (
   <>

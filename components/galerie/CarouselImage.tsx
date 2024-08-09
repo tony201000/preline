@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import Image from 'next/image'; // Import du composant Image de Next.js
+"use client";
+import React from "react";
+import Image from "next/image"; // Import du composant Image de Next.js
 
 interface CarouselImageProps {
   src: string;

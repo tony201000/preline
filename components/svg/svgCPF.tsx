@@ -1,11 +1,8 @@
-
-'use client';
+"use client";
 
 const SvgCPF = () => {
   return (
-
     <div className="h-52 flex flex-col justify-center items-center bg-rose-500 rounded-t-xl">
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -85,9 +82,7 @@ const SvgCPF = () => {
           </g>
         </g>
       </svg>
-
     </div>
-
   );
 };
 

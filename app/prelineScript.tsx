@@ -15,18 +15,21 @@ export default function PrelineScript() {
 
   useEffect(() => {
     const loadPreline = async () => {
-      await import('preline/preline');
+      await import("preline/preline");
 
       const initializePreline = () => {
         try {
-          if (window.HSStaticMethods && typeof window.HSStaticMethods.autoInit === 'function') {
+          if (
+            window.HSStaticMethods &&
+            typeof window.HSStaticMethods.autoInit === "function"
+          ) {
             window.HSStaticMethods.autoInit();
 
             // Log all elements to debug attributes
-            const allElements = document.querySelectorAll('*');
-            allElements.forEach(el => {
-              if (el.hasAttribute('data-redeviation-bs-uid')) {
-                console.log('Element with data-redeviation-bs-uid:', el);
+            const allElements = document.querySelectorAll("*");
+            allElements.forEach((el) => {
+              if (el.hasAttribute("data-redeviation-bs-uid")) {
+                console.log("Element with data-redeviation-bs-uid:", el);
               }
             });
           } else {
@@ -38,10 +41,13 @@ export default function PrelineScript() {
         }
       };
 
-      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      if (
+        document.readyState === "complete" ||
+        document.readyState === "interactive"
+      ) {
         initializePreline();
       } else {
-        document.addEventListener('DOMContentLoaded', initializePreline);
+        document.addEventListener("DOMContentLoaded", initializePreline);
       }
     };
 

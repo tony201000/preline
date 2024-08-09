@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import ParrainageBourso from "./redirections/parrainageBourso";
 import SvgBoursorama from "./svg/svgBoursorama";
@@ -22,7 +22,9 @@ const CardMenu = () => (
               Boursorama banque
             </h3>
             <p className="mt-3 text-gray-500 dark:text-neutral-500">
-              Si vous n&rsquo;avez pas encore de compte Boursorama alors c&rsquo;est le moment avec jusqu&rsquo;a 220 euros offerts sans engagement et sans frais.
+              Si vous n&rsquo;avez pas encore de compte Boursorama alors
+              c&rsquo;est le moment avec jusqu&rsquo;a 220 euros offerts sans
+              engagement et sans frais.
             </p>
           </div>
           <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
@@ -38,7 +40,6 @@ const CardMenu = () => (
             >
               <ParrainageBourso />
             </a>
-            
           </div>
         </div>
         {/* End Card */}
@@ -53,7 +54,9 @@ const CardMenu = () => (
               Mon compte de Formation CPF
             </h3>
             <p className="mt-3 text-gray-500 dark:text-neutral-500">
-              On a tous un compte CPF avec des centaines ou milliers d&rsquo;euros dessus. Mais on n&rsquo;en n&rsquo;a pas forcément besoin. Alors pourquoi ne pas recuperer cet argent ?
+              On a tous un compte CPF avec des centaines ou milliers
+              d&rsquo;euros dessus. Mais on n&rsquo;en n&rsquo;a pas forcément
+              besoin. Alors pourquoi ne pas recuperer cet argent ?
             </p>
           </div>
           <div className="mt-auto flex border-t border-gray-200 divide-x divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700">
@@ -65,7 +68,8 @@ const CardMenu = () => (
             </a>
             <a
               className="w-full py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-ee-xl bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-              href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/login" target='_blank'
+              href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/login"
+              target="_blank"
             >
               Acceder a son compte
             </a>
@@ -107,6 +111,6 @@ const CardMenu = () => (
     </div>
     {/* End Card Blog */}
   </>
-)
+);
 
 export default CardMenu;

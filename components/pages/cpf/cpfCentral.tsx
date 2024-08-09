@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import ModuleCalCpf from '../../moduleMontantCPF/modal';
-import Image from 'next/image';
+import React, { useState, useEffect } from "react";
+import ModuleCalCpf from "../../moduleMontantCPF/modal";
+import Image from "next/image";
 
 const CPF: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -24,14 +24,14 @@ const CPF: React.FC = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 lg:items-center">
             <div className="aspect-w-16 aspect-h-9 lg:aspect-none">
-            <Image
-              className="w-full object-cover rounded-xl"
-              src="https://i.ibb.co/6NwG7Zh/Souriez-et-recuperez-ce-qui-vous-appartient.jpg"
-              alt="Souriez, et récupérez ce qui vous appartient"
-              layout="responsive"  // ou "intrinsic", "fixed", selon tes besoins
-              width={1200}  // largeur de l&rsquo;image en pixels
-              height={675}  // hauteur de l&rsquo;image en pixels
-            />
+              <Image
+                className="w-full object-cover rounded-xl"
+                src="https://i.ibb.co/6NwG7Zh/Souriez-et-recuperez-ce-qui-vous-appartient.jpg"
+                alt="Souriez, et récupérez ce qui vous appartient"
+                layout="responsive" // ou "intrinsic", "fixed", selon tes besoins
+                width={1200} // largeur de l&rsquo;image en pixels
+                height={675} // hauteur de l&rsquo;image en pixels
+              />
             </div>
             {/* End Col */}
             {/* Timeline */}
@@ -61,9 +61,25 @@ const CPF: React.FC = () => {
                       Se connecter au site officiel du CPF.
                     </span>
                     <p>Pour cela vous devez vous connecter sur </p>
-                    <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/" target='_blank' className='hover:text-red-900'> moncompteformation.gouv.fr </a>
-                    et utiliser le service de LAPOSTE : <b>Identité Numérique</b>, pour vous connecter.
-                    <a href="/dashboard/cpf/Carousel" target='_blank' className="text-sm lg:text-base hover:text-red-600 italic"> Cliquez ici pour accéder au guide d&rsquo;inscription à l&rsquo;Identité Numérique.</a>                
+                    <a
+                      href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/"
+                      target="_blank"
+                      className="hover:text-red-900"
+                    >
+                      {" "}
+                      moncompteformation.gouv.fr{" "}
+                    </a>
+                    et utiliser le service de LAPOSTE :{" "}
+                    <b>Identité Numérique</b>, pour vous connecter.
+                    <a
+                      href="/dashboard/cpf/Carousel"
+                      target="_blank"
+                      className="text-sm lg:text-base hover:text-red-600 italic"
+                    >
+                      {" "}
+                      Cliquez ici pour accéder au guide d&rsquo;inscription à
+                      l&rsquo;Identité Numérique.
+                    </a>
                   </p>
                 </div>
                 {/* End Right Content */}
@@ -86,8 +102,13 @@ const CPF: React.FC = () => {
                     <span className="text-white">
                       Consulter les montants disponibles.
                     </span>
-                    <p>Le montant de votre CPF est indiqué sur votre compte CPF, directement après vous être connecté. </p>
-                    <p>Une fois en possession de ce montant, utilisez ce module pour connaître le montant convertible en argent:
+                    <p>
+                      Le montant de votre CPF est indiqué sur votre compte CPF,
+                      directement après vous être connecté.{" "}
+                    </p>
+                    <p>
+                      Une fois en possession de ce montant, utilisez ce module
+                      pour connaître le montant convertible en argent:
                       <ModuleCalCpf />
                     </p>
                   </p>
@@ -110,8 +131,13 @@ const CPF: React.FC = () => {
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm md:text-base text-black">
                     <span className="text-white">Contactez votre ami</span>
-                    <p>Votre ami vous mettra en relation avec la société partenaire.</p>
-                    <p className='font-semibold'>Moins de 30 minutes suffisent !</p>
+                    <p>
+                      Votre ami vous mettra en relation avec la société
+                      partenaire.
+                    </p>
+                    <p className="font-semibold">
+                      Moins de 30 minutes suffisent !
+                    </p>
                   </p>
                 </div>
                 {/* End Right Content */}
@@ -132,7 +158,10 @@ const CPF: React.FC = () => {
                 <div className="grow pt-0.5 pb-8 sm:pb-12">
                   <p className="text-sm md:text-base text-black">
                     <span className="text-white">Réception des gains</span>
-                    <p>Quelques jours après, vous recevrez l&rsquo;argent par virement bancaire sur votre compte.</p>
+                    <p>
+                      Quelques jours après, vous recevrez l&rsquo;argent par
+                      virement bancaire sur votre compte.
+                    </p>
                   </p>
                 </div>
                 {/* End Right Content */}

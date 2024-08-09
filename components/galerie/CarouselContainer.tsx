@@ -1,6 +1,6 @@
 // /app/carousel/CarouselContainer.tsx
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface CarouselContainerProps {
   onTouchStart: (e: React.TouchEvent) => void;
@@ -10,7 +10,10 @@ interface CarouselContainerProps {
 /**
  * Composant conteneur pour le carrousel.
  */
-const CarouselContainer: React.FC<CarouselContainerProps> = ({ onTouchStart, children }) => {
+const CarouselContainer: React.FC<CarouselContainerProps> = ({
+  onTouchStart,
+  children,
+}) => {
   return (
     <div className="carousel-container" onTouchStart={onTouchStart}>
       {children}

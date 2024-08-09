@@ -1,6 +1,6 @@
 // /app/login/RememberMeCheckbox.tsx
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface RememberMeCheckboxProps {
   checked: boolean;
@@ -10,7 +10,10 @@ interface RememberMeCheckboxProps {
 /**
  * Composant pour la case à cocher "Se souvenir de moi".
  */
-const RememberMeCheckbox: React.FC<RememberMeCheckboxProps> = ({ checked, onChange }) => {
+const RememberMeCheckbox: React.FC<RememberMeCheckboxProps> = ({
+  checked,
+  onChange,
+}) => {
   return (
     <div className="flex items-center">
       <div className="flex">
@@ -24,7 +27,9 @@ const RememberMeCheckbox: React.FC<RememberMeCheckboxProps> = ({ checked, onChan
         />
       </div>
       <div className="ms-3">
-        <label htmlFor="remember-me" className="text-sm">Se souvenir de moi</label>
+        <label htmlFor="remember-me" className="text-sm">
+          Se souvenir de moi
+        </label>
       </div>
     </div>
   );

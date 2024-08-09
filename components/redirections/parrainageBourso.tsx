@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 
-  const ParrainageBourso: React.FC = () => {
-    const openBoursobank = () => {
-      window.open("/redirect", "_blank");
-    };
+const ParrainageBourso: React.FC = () => {
+  const openBoursobank = () => {
+    window.open("/redirect", "_blank");
+  };
 
   return (
     <div className="text-center">

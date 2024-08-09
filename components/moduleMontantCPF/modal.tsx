@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ModuleCalCpf: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [montantInitial, setMontantInitial] = useState<number | string>('');
-  const [resultat, setResultat] = useState<string>('');
+  const [montantInitial, setMontantInitial] = useState<number | string>("");
+  const [resultat, setResultat] = useState<string>("");
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -31,7 +31,7 @@ const ModuleCalCpf: React.FC = () => {
           onClick={toggleModal}
           className="py-1 px-2 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
           aria-haspopup="dialog"
-          aria-expanded={isModalOpen ? 'true' : 'false'}
+          aria-expanded={isModalOpen ? "true" : "false"}
           aria-controls="hs-task-created-alert"
         >
           Votre Montant
@@ -77,7 +77,10 @@ const ModuleCalCpf: React.FC = () => {
               <div className="p-5">
                 <h1 className="text-2xl text-gray-800">Calcul de Montant</h1>
                 <form onSubmit={calculerMontant} className="mt-5">
-                  <label htmlFor="montantInitial" className="block text-gray-600 mb-2">
+                  <label
+                    htmlFor="montantInitial"
+                    className="block text-gray-600 mb-2"
+                  >
                     Montant initial du CPF (en euros) :
                   </label>
                   <input
@@ -96,14 +99,16 @@ const ModuleCalCpf: React.FC = () => {
                     Calculer
                   </button>
                 </form>
-                {resultat && <p className="mt-5 text-lg text-gray-800">{resultat}</p>}
+                {resultat && (
+                  <p className="mt-5 text-lg text-gray-800">{resultat}</p>
+                )}
               </div>
               {/* Fin contenu du modal */}
             </div>
           </div>
         </div>
       )}
-      </>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import Image from 'next/image'; // Import du composant Image de Next.js
+"use client";
+import React from "react";
+import Image from "next/image"; // Import du composant Image de Next.js
 
 /**
  * Composant pour afficher l'image en plein écran.
@@ -13,10 +13,18 @@ interface FullscreenImageProps {
   zoomLevel: number;
 }
 
-const FullscreenImage: React.FC<FullscreenImageProps> = ({ src, onClose, onZoomIn, onZoomOut, zoomLevel }) => {
+const FullscreenImage: React.FC<FullscreenImageProps> = ({
+  src,
+  onClose,
+  onZoomIn,
+  onZoomOut,
+  zoomLevel,
+}) => {
   return (
     <div className="fullscreen-container">
-      <button className="close-button" onClick={onClose}>✖</button>
+      <button className="close-button" onClick={onClose}>
+        ✖
+      </button>
       <div className="zoom-controls">
         <button onClick={onZoomOut}>-</button>
         <button onClick={onZoomIn}>+</button>

@@ -1,11 +1,11 @@
-'use client';
+"use client";
 // app/CalculDeMontant.tsx
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const CalculDeMontant: React.FC = () => {
-  const [montantInitial, setMontantInitial] = useState<number | string>('');
-  const [resultat, setResultat] = useState<string>('');
+  const [montantInitial, setMontantInitial] = useState<number | string>("");
+  const [resultat, setResultat] = useState<string>("");
 
   const calculerMontant = (e: React.FormEvent) => {
     e.preventDefault();

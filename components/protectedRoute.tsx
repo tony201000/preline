@@ -1,8 +1,8 @@
-'use client';
-import React, { useEffect, ReactNode } from 'react';
-import { useRouter } from 'next/navigation';
-import { auth } from '../firebase';
-import { User, onAuthStateChanged } from 'firebase/auth';
+"use client";
+import React, { useEffect, ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import { auth } from "../firebase";
+import { User, onAuthStateChanged } from "firebase/auth";
 
 interface ProtectedRouteProps {
   children: ReactNode;
@@ -14,7 +14,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {
       if (!user) {
-        router.push('/login'); // Assurez-vous que vous avez une page de connexion configurée
+        router.push("/login"); // Assurez-vous que vous avez une page de connexion configurée
       }
     });
 

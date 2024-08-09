@@ -1,6 +1,6 @@
 // /app/login/ErrorMessage.tsx
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface ErrorMessageProps {
   message: string | null;

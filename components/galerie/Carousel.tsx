@@ -1,20 +1,16 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import FullscreenImage from './FullscreenImage';
-import CarouselIndicator from './CarouselIndicator';
-import CarouselImage from './CarouselImage';
-import CarouselButtons from './CarouselButtons';
-import CarouselContainer from './CarouselContainer';
-import '@/styles/carousel.module.scss';
+"use client";
+import React, { useEffect, useState } from "react";
+import FullscreenImage from "./FullscreenImage";
+import CarouselIndicator from "./CarouselIndicator";
+import CarouselImage from "./CarouselImage";
+import CarouselButtons from "./CarouselButtons";
+import CarouselContainer from "./CarouselContainer";
+import "@/styles/carousel.module.scss";
 import { ref, getDownloadURL } from "firebase/storage";
 
 /**
  * Composant principal du carrousel d'images.
  */
-
-
-
-
 
 const Carousel: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
@@ -27,14 +23,14 @@ const Carousel: React.FC = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('/api/images');
+        const response = await fetch("/api/images");
         if (!response.ok) {
           throw new Error(`Erreur HTTP! status: ${response.status}`);
         }
         const data = await response.json();
         setImages(data);
       } catch (error) {
-        console.error('Erreur lors de la récupération des images:', error);
+        console.error("Erreur lors de la récupération des images:", error);
       }
     };
     fetchImages();
@@ -42,12 +38,16 @@ const Carousel: React.FC = () => {
 
   // Navigation à gauche
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   // Navigation à droite
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   // Activation du mode plein écran
@@ -88,13 +88,13 @@ const Carousel: React.FC = () => {
       const touchEndX = (e as TouchEvent).touches[0].clientX;
       if (touchStartX - touchEndX > 50) {
         handleNext();
-        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener("touchmove", handleTouchMove);
       } else if (touchEndX - touchStartX > 50) {
         handlePrev();
-        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener("touchmove", handleTouchMove);
       }
     };
-    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener("touchmove", handleTouchMove);
   };
 
   return (
@@ -107,7 +107,10 @@ const Carousel: React.FC = () => {
           onClick={handleFullscreen}
         />
       </div>
-      <CarouselIndicator currentIndex={currentIndex} totalImages={images.length} />
+      <CarouselIndicator
+        currentIndex={currentIndex}
+        totalImages={images.length}
+      />
       {isFullscreen && (
         <FullscreenImage
           src={images[currentIndex]}

@@ -1,6 +1,6 @@
 // /app/login/InputField.tsx
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 
 interface InputFieldProps {
   id: string;
@@ -13,10 +13,18 @@ interface InputFieldProps {
 /**
  * Composant pour un champ de saisie.
  */
-const InputField: React.FC<InputFieldProps> = ({ id, label, type, value, onChange }) => {
+const InputField: React.FC<InputFieldProps> = ({
+  id,
+  label,
+  type,
+  value,
+  onChange,
+}) => {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm mb-2">{label}</label>
+      <label htmlFor={id} className="block text-sm mb-2">
+        {label}
+      </label>
       <div className="relative">
         <input
           type={type}
