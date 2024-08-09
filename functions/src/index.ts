@@ -8,13 +8,15 @@ initializeApp();
 
 // Take the text parameter passed to this HTTP endpoint and insert it into
 // Firestore under the path /messages/:documentId/original
-export const addmessage = onRequest(async (req, res) => {
+export const addMessage = onRequest(async (req, res) => {
   // Grab the text parameter.
   const original: string = req.query.text as string;
+
   // Push the new message into Firestore using the Firebase Admin SDK.
   const writeResult = await getFirestore()
-      .collection("messages")
-      .add({ original });
+    .collection("messages")
+    .add({ original });
+
   // Send back a message that we've successfully written the message
   res.json({ result: `Message with ID: ${writeResult.id} added.` });
 });
@@ -22,7 +24,7 @@ export const addmessage = onRequest(async (req, res) => {
 // Listens for new messages added to /messages/:documentId/original
 // and saves an uppercased version of the message
 // to /messages/:documentId/uppercase
-export const makeuppercase = onDocumentCreated("/messages/{documentId}", (event) => {
+export const makeUppercase = onDocumentCreated("/messages/{documentId}", (event) => {
   // Grab the current value of what was written to Firestore.
   const original: string = event.data?.data()?.original || '';
 
@@ -37,4 +39,3 @@ export const makeuppercase = onDocumentCreated("/messages/{documentId}", (event)
   // Setting an 'uppercase' field in Firestore document returns a Promise.
   return event.data?.ref.set({ uppercase }, { merge: true });
 });
-
