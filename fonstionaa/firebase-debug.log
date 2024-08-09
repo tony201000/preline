@@ -1,0 +1,28 @@
+[debug] [2024-08-09T16:13:34.667Z] ----------------------------------------------------------------------
+[debug] [2024-08-09T16:13:34.674Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tony2\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-08-09T16:13:34.675Z] CLI Version:   13.15.0
+[debug] [2024-08-09T16:13:34.676Z] Platform:      win32
+[debug] [2024-08-09T16:13:34.676Z] Node Version:  v20.16.0
+[debug] [2024-08-09T16:13:34.676Z] Time:          Fri Aug 09 2024 23:13:34 GMT+0700 (heure d’Indochine)
+[debug] [2024-08-09T16:13:34.677Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-09T16:13:34.855Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-09T16:13:34.857Z] > authorizing via signed-in user (blindboxcollection@gmail.com)
+[debug] [2024-08-09T16:13:34.857Z] [iam] checking project blindboxcollection-6a548 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-08-09T16:13:34.862Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/blindboxcollection-6a548:testIamPermissions [none]
+[debug] [2024-08-09T16:13:34.863Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/blindboxcollection-6a548:testIamPermissions x-goog-quota-user=projects/blindboxcollection-6a548
+[debug] [2024-08-09T16:13:34.863Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blindboxcollection-6a548:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-08-09T16:13:36.215Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/blindboxcollection-6a548:testIamPermissions 200
+[debug] [2024-08-09T16:13:36.215Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/blindboxcollection-6a548:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-08-09T16:13:36.216Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/blindboxcollection-6a548/serviceAccounts/blindboxcollection-6a548@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-08-09T16:13:36.216Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/blindboxcollection-6a548/serviceAccounts/blindboxcollection-6a548@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-08-09T16:13:37.731Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/blindboxcollection-6a548/serviceAccounts/blindboxcollection-6a548@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-08-09T16:13:37.732Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/blindboxcollection-6a548/serviceAccounts/blindboxcollection-6a548@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-08-09T16:13:37.734Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/blindboxcollection-6a548 [none]
+[debug] [2024-08-09T16:13:38.173Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/blindboxcollection-6a548 200
+[debug] [2024-08-09T16:13:38.174Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/blindboxcollection-6a548 {"projectId":"blindboxcollection-6a548","projectNumber":"336289874791","displayName":"Blindboxcollection","name":"projects/blindboxcollection-6a548","resources":{"hostingSite":"blindboxcollection-6a548","realtimeDatabaseInstance":"blindboxcollection-6a548-default-rtdb","storageBucket":"blindboxcollection-6a548.appspot.com","locationId":"asia-southeast1"},"state":"ACTIVE","etag":"1_f8359e07-bc3b-4242-bfb4-a5b7aab58ae0"}
+[info] 
+[info] === Deploying to 'blindboxcollection-6a548'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
