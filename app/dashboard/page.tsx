@@ -2,7 +2,8 @@
 import React from "react";
 import CardMenu from "../../components/cardMenu";
 import HeaderMember from "../../components/global/headerMember";
-import ProtectedRoute from "../../components/protectedRoute";
+import { GetServerSideProps } from "next";
+import { withAuth } from "../../lib/authUtils"; // Chemin à adapter selon ton arborescence
 
 const Dashboard = () => {
   return (
@@ -10,13 +11,18 @@ const Dashboard = () => {
       <div>
         <HeaderMember />
         <div className="pt-20">
-          <ProtectedRoute>
             <CardMenu />
-          </ProtectedRoute>
         </div>
       </div>
     </>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = withAuth(async (context) => {
+  // Ici, tu peux ajouter des props spécifiques à cette page si nécessaire
+  return {
+    props: {}, // Ajoute d'autres props si besoin
+  };
+});
 
 export default Dashboard;
