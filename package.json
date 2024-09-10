@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/flickity": "^2.2.11",
-    "axios": "^1.7.3",
+    "axios": "^1.7.4",
     "cloudinary": "^2.4.0",
     "dotenv": "^16.4.5",
     "firebase": "^10.12.5",
